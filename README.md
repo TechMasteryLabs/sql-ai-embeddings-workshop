@@ -1,0 +1,1 @@
+# sql-ai-embeddings-workshop
