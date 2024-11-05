@@ -1,25 +1,17 @@
 # LAB420: Build new AI applications with Azure SQL Database
 
 ## Overview
-Welcome to the hands-on lab where you'll learn Generative AI using Azure SQL Database and REST endpoints. This lab is designed for application developers, data scientists, and AI engineers looking to integrate advanced AI capabilities into their applications.
+This lab will guide you through creating a RAG application using relational data, Azure OpenAI, and the Azure SQL Database. The workshop utilizes the always free Azure SQL Database and the ability to call external REST endpoints via a system stored procedure ([sp_invoke_external_rest_endpoint](https://learn.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql?view=azuresqldb-current&tabs=request-headers)).
 
-### Goals
-- **Set up Generative AI**: Learn to integrate AI capabailities with Azure SQL Database.
-- **RESTful API calls**: Understand how to make REST calls to Azure AI Content Safety and Azure OpenAI services.
-- **Extend AI scenarios**: Explore Hybrid Search and Generative AI implementations.
-- **Chat-driven SQL interfaces**: Implement chat-driven interfaces with SQL databases for more intelligent applications.
-- **Practical tips and examples**: Apply chat-driven features in app development with real-world examples.
-
-## Modules
-1. **[Creating and Connecting to Your Free Azure SQL Database](./docs/1-create-azure-SQL-database.md)**: Get started with your own Azure SQL Database.
-2. **[Creating, Embedding, and Storing in SQL Database](./docs/2-creating-embedding-and-storing-in-SQL-database.md)**: Dive into the process of embedding and storing data using SQL.
-3. **[Vector Search with Vector Functions](./docs/3-vector-search-with-vector-functions.md)**: Utilize vector functions for efficient search capabilities.
-4. **[Filtered Semantic Search](./docs/4-filtered-semantic-search.md)**: Combine the power of traditional and vector searches.
-5. **[GenAI over your data - Recommendation](./docs/5-azure-openai-recommendation.md)**: Implement chat completions with the help of Azure OpenAI.
-5. **[GenAI over your data - Image Generation and Description](./docs/6-azure-openai-image-gen-desc.md)**: Implement chat completions with the help of Azure OpenAI.
-6. **[Using the Azure AI Content Safety](./docs/7-content-safety.md)**: Ensure content safety with Azure AI's endpoints.
-
-Deck with resources can be found [here](./docs/media/Chat-with-your-Data-Lab.pdf)
+The lab contains 8 chapters:
+* The Azure Portal and connecting to your free Azure SQL Database
+* Getting started with REST in the database
+* Creating embeddings for relational data with Azure OpenAI
+* Retrieval Augmented Generation (RAG) and Azure SQL
+* Create a chat app on your data with RAG and Azure SQL
+* Securing your data
+* GraphRAG and the Azure SQL Database
+* Extra Credit Activities
 
 ## Prerequisites
 - Basic knowledge of SQL databases and RESTful APIs.

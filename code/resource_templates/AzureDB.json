@@ -1,0 +1,206 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.12.40.16777",
+      "templateHash": "16856611863128783179"
+    }
+  },
+  "parameters": {
+    "serverName": {
+      "type": "string",
+      "defaultValue": "[uniqueString('sql', resourceGroup().id)]",
+      "metadata": {
+        "description": "The name of the SQL logical server."
+      }
+    },
+    "sqlDBName": {
+      "type": "string",
+      "defaultValue": "SampleDB",
+      "metadata": {
+        "description": "The name of the SQL Database."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Location for all resources."
+      }
+    },
+    "administratorLogin": {
+      "type": "string",
+      "metadata": {
+        "description": "The administrator username of the SQL logical server."
+      }
+    },
+    "administratorLoginPassword": {
+      "type": "secureString",
+      "metadata": {
+        "description": "The administrator password of the SQL logical server."
+      }
+    },
+    "aiServicesName": {
+      "type": "string",
+      "defaultValue": "[concat('igniteai', format('aiServices-{0}', uniqueString(resourceGroup().id)))]",
+      "metadata": {
+        "description": "That name is the name of our application. It has to be unique.Type a name followed by your resource group name. (<name>-<resourceGroupName>)"
+      }
+    },
+    "sku": {
+      "type": "string",
+      "defaultValue": "S0",
+      "allowedValues": [
+        "S0"
+      ]
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Sql/servers",
+      "apiVersion": "2022-05-01-preview",
+      "name": "[concat('azuresql', parameters('serverName'))]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "administratorLogin": "[parameters('administratorLogin')]",
+        "administratorLoginPassword": "[parameters('administratorLoginPassword')]",
+        "useFreeLimit": "True"
+      }
+    },
+    {
+      "type": "Microsoft.Sql/servers/databases",
+      "apiVersion": "2023-08-01-preview",
+      "name": "[format('{0}/{1}', concat('azuresql', parameters('serverName')), parameters('sqlDBName'))]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "GP_S_Gen5",
+        "tier": "GeneralPurpose",
+        "family": "Gen5",
+        "capacity": 2
+      },
+      "kind": "v12.0,user,vcore,serverless,freelimit",
+      "properties": {
+        "sampleName": "AdventureWorksLT"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', concat('azuresql', parameters('serverName')))]"
+      ]
+    },
+    {
+      "type": "Microsoft.CognitiveServices/accounts",
+      "apiVersion": "2023-05-01",
+      "name": "[concat('igniteai', parameters('aiServicesName'))]",
+      "location": "[parameters('location')]",
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "sku": {
+        "name": "[parameters('sku')]"
+      },
+      "kind": "OpenAI",
+      "properties": {
+        "customSubDomainName": "[concat('igniteai', parameters('aiServicesName'))]",
+        "networkAcls": {
+          "defaultAction": "Allow",
+          "virtualNetworkRules": [],
+          "ipRules": []
+        },
+        "publicNetworkAccess": "Enabled"
+      }
+    },
+    {
+      "type": "Microsoft.CognitiveServices/accounts/deployments",
+      "apiVersion": "2024-06-01-preview",
+      "name": "[concat(concat('igniteai', parameters('aiServicesName')), '/gpt-4')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.CognitiveServices/accounts', concat('igniteai', parameters('aiServicesName')))]"
+      ],
+      "sku": {
+        "name": "GlobalStandard",
+        "capacity": 2000
+      },
+      "properties": {
+        "model": {
+          "format": "OpenAI",
+          "name": "gpt-4",
+          "version": "turbo-2024-04-09"
+        },
+        "versionUpgradeOption": "OnceNewDefaultVersionAvailable",
+        "currentCapacity": 2000,
+        "raiPolicyName": "Microsoft.DefaultV2"
+      }
+    },
+    {
+      "type": "Microsoft.CognitiveServices/accounts/deployments",
+      "apiVersion": "2024-06-01-preview",
+      "name": "[concat(concat('igniteai', parameters('aiServicesName')), '/text-embedding-ada-002')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', concat('azuresql', parameters('serverName')))]"
+      ],
+      "sku": {
+        "name": "Standard",
+        "capacity": 350
+      },
+      "properties": {
+        "model": {
+          "format": "OpenAI",
+          "name": "text-embedding-ada-002",
+          "version": "2"
+        },
+        "versionUpgradeOption": "OnceNewDefaultVersionAvailable",
+        "currentCapacity": 350,
+        "raiPolicyName": "Microsoft.DefaultV2"
+      }
+    },
+    {
+      "type": "Microsoft.Sql/servers/firewallRules",
+      "apiVersion": "2023-08-01-preview",
+      "name": "[concat(concat('azuresql', parameters('serverName')), '/skillable1')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', concat('azuresql', parameters('serverName')))]"
+      ],
+      "properties": {
+        "startIpAddress": "103.18.87.240",
+        "endIpAddress": "103.18.87.249"
+      }
+    },
+    {
+      "type": "Microsoft.Sql/servers/firewallRules",
+      "apiVersion": "2023-08-01-preview",
+      "name": "[concat(concat('azuresql', parameters('serverName')), '/skillable2')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', concat('azuresql', parameters('serverName')))]"
+      ],
+      "properties": {
+        "startIpAddress": "163.47.101.118",
+        "endIpAddress": "163.47.101.126"
+      }
+    },
+    {
+      "type": "Microsoft.Sql/servers/firewallRules",
+      "apiVersion": "2023-08-01-preview",
+      "name": "[concat(concat('azuresql', parameters('serverName')), '/skillable3')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', concat('azuresql', parameters('serverName')))]"
+      ],
+      "properties": {
+        "startIpAddress": "168.245.203.241",
+        "endIpAddress": "168.245.203.254"
+      }
+    },
+    {
+      "type": "Microsoft.Sql/servers/firewallRules",
+      "apiVersion": "2023-08-01-preview",
+      "name": "[concat(concat('azuresql', parameters('serverName')), '/skillable4')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', concat('azuresql', parameters('serverName')))]"
+      ],
+      "properties": {
+        "startIpAddress": "185.254.59.118",
+        "endIpAddress": "185.254.59.127"
+      }
+    }
+  ]
+}

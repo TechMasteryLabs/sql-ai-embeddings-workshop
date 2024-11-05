@@ -37,8 +37,6 @@ def get_products(search_text:str) -> str:
 
         payload = ""
         for row in results:
-            #description = str(row[2]).replace("\n", " ")
-            #product_name = ", ".join(json.loads(row[7]))    
             payload += f'product name: {row[0]}|color: {row[1]}|category: {row[2]}|model: {row[3]}|description: {row[4]}|"price: "{row[5]}|"product weight: "{row[6]}'
             payload += "\n"
     
