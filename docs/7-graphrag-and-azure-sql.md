@@ -464,7 +464,7 @@ Our graph will have 3 node tables. They will contain tires, bike frames and bike
     GO
     ```
 
-1. Back in the Chainlit application, ask the following question:
+1. Back in the Chainlit application, ask the following questions:
 
     ```TEXT
     I am looking for a touring bike configuration for casual riding. I want a yellow bike
@@ -476,7 +476,7 @@ Our graph will have 3 node tables. They will contain tires, bike frames and bike
 
     and see what bike was configured for you!
 
-    ![A picture of the bike configured via GraphRAG](instructions275758/Screenshot 2024-10-30 at 10.09.16 AM.png){1000}
+    ![A picture of the bike configured via GraphRAG](./media/Screenshot%202024-10-30%20at%2010.09.16 AM.png)
 
 1. Try other configurations!
 

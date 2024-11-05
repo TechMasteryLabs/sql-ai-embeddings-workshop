@@ -71,7 +71,7 @@ Prompt data is something that companies and organizations will want to preserve 
     do you sell black gloves?
     ```
 
-    ![A picture of asking the chainlit application a question to be inserted into the ledger table](instructions275758/Screenshot 2024-10-29 at 9.18.19 AM.png){1000}
+    ![A picture of asking the chainlit application a question to be inserted into the ledger table](./media/Screenshot%202024-10-29%20at%209.18.19 AM.png)
 
     Now, run the following SQL in a blank query editor in VS Code:
 
@@ -79,7 +79,7 @@ Prompt data is something that companies and organizations will want to preserve 
     select * from dbo.PromptHistory;
     ```
 
-    ![A picture of querying the ledger table and seeing the question just asked in the prompt field.](instructions275758/Screenshot 2024-10-29 at 9.22.50 AM.png){1000}
+    ![A picture of querying the ledger table and seeing the question just asked in the prompt field.](./media/Screenshot%202024-10-29%20at%209.22.50 AM.png)
 
 1. Can we update an Append-only ledger table? Run the following SQL in a blank query editor in VS Code:
 
@@ -89,4 +89,4 @@ Prompt data is something that companies and organizations will want to preserve 
 
     No, we get the error "Msg 37359, Level 16, State 1, Line 1 Updates are not allowed for the append only Ledger table 'dbo.PromptHistory'."
 
-    ![A picture of getting an error when trying to update an append only ledger table](instructions275758/Screenshot 2024-10-29 at 9.23.41 AM.png){1000}
+    ![A picture of getting an error when trying to update an append only ledger table](./media/Screenshot%202024-10-29%20at%209.23.41 AM.png)

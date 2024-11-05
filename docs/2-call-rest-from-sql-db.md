@@ -39,7 +39,7 @@ In this first section, you will test the External REST Endpoint Invocation (EREI
 
 1. Then click the run button on the query sheet
 
-    ![A picture of clicking the run button on the query sheet](instructions275758/Screenshot 2024-10-24 at 9.18.36 AM.png){900}
+    ![A picture of clicking the run button on the query sheet](./media/Screenshot%202024-10-24%20at%209.18.36 AM.png)
 
     The master key will be set, and the database scoped credential will be created.
 

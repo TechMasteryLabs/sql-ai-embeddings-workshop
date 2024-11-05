@@ -19,7 +19,7 @@ Filter predicates are applied while reading data from the base table so here is 
 
 1. Start by clicking the **SQL Extension** on the left side of Visual Studio Code.
 
-    ![A picture of clicking Add Connection in the SQL Extension](instructions275758/Screenshot 2024-10-22 at 1.34.33 PM.png){300}
+    ![A picture of clicking Add Connection in the SQL Extension](./media/Screenshot%202024-10-22%20at%201.34.33 PM.png){300}
 
 1. First, we need to create a inline table-valued function that will check to see which user is accessing the table and then blocking all products who have the category ID of 25. Run the following SQL in a blank query editor in VS Code:
 
@@ -113,6 +113,6 @@ Filter predicates are applied while reading data from the base table so here is 
 
     Previously, we were provided an answer as you saw in the last section. Now, we are told that it cannot find anything that matches that query.
 
-    ![A picture of asking the question "Do you sell any yellow jerseys?" and not seeing any products because of the security policy.](instructions275758/Screenshot 2024-10-29 at 9.15.15 AM.png){1000}
+    ![A picture of asking the question "Do you sell any yellow jerseys?" and not seeing any products because of the security policy.](./media/Screenshot%202024-10-29%20at%209.15.15 AM.png)
 
     Using AI does not mean we have to compromise the security of our data; existing database security best practices still apply!
