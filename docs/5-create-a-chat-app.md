@@ -90,10 +90,13 @@ In the section of the lab, you will create a stored procedure that will be used 
 
 ## Create a web application user
 
-In this section, we are going to create a web application user that the Chainlit application will use. Its never a good idea to have your sqladmin user be the user we connect to the database with in an application.
+In this section, we are going to create a limited privilege web application user that the Chainlit application will connect to the database with. Its never a good idea to have your sqladmin user be the user we connect to the database with in an application.
 
 1. Run the following SQL in a blank query editor in VS Code:
 
+    > [!KNOWLEDGE]
+    > **The ODBC database connection string used here contains the limited privilege user (aiuser) you just created.** 
+    
     ```SQL
     CREATE USER [aiuser] WITH PASSWORD = 'kAgH7e!0D$#';
 
