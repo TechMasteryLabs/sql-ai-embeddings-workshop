@@ -6,7 +6,7 @@ Vector similarity searching is a technique used to find and retrieve data points
 
 Vector similarity searching has numerous applications, such as recommendation systems, search engines, image and video retrieval, and natural language processing tasks. It allows for efficient and accurate retrieval of similar items, enabling users to find relevant information or discover related items quickly and effectively.
 
-The VECTOR_DISTANCE function is a new feature of the Azure SQL Database that can calculate the distance between two vectors enabling similarity searching right in the database. 
+The [VECTOR_DISTANCE](https://learn.microsoft.com/sql/t-sql/functions/vector-distance-transact-sql?view=azuresqldb-current) function is a [new feature of the Azure SQL Database](https://learn.microsoft.com/sql/t-sql/functions/vector-functions-transact-sql?view=azuresqldb-current) that can calculate the distance between two vectors enabling similarity searching right in the database. 
 
 The syntax is as follows:
 

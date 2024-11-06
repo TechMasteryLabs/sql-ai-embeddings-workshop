@@ -99,11 +99,11 @@ Embeddings created and stored in the Azure SQL Database during this lab will pow
     }
     ```
 
-    This JSON vector array can now be used with new vector datatype and functions in the Azure SQL database such as VECTOR_DISTANCE. 
+    This JSON vector array can now be used with [new vector datatype](https://learn.microsoft.com/sql/t-sql/data-types/vector-data-type?view=azuresqldb-current&tabs=csharp-sample) and functions in the Azure SQL database such as [VECTOR_DISTANCE](https://learn.microsoft.com/sql/t-sql/functions/vector-distance-transact-sql?view=azuresqldb-current). 
 
 ## Preparing the database and creating embeddings
 
-This next section of the lab will have you alter the Adventure Works product table to add a new vector datatype column. You will then use a stored procedure to create embeddings for the products and store the vector arrays in that column.
+This next section of the lab will have you alter the Adventure Works product table to add a [new vector datatype](https://learn.microsoft.com/sql/t-sql/data-types/vector-data-type?view=azuresqldb-current&tabs=csharp-sample) column. You will then use a stored procedure to create embeddings for the products and store the vector arrays in that column.
 
 1. In a new query sheet or an existing bank one in VS Code, copy and paste the following T-SQL:
 
