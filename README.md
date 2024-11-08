@@ -7,7 +7,7 @@ The lab contains 8 chapters:
 * The Azure Portal and connecting to your free Azure SQL Database
 * Getting started with REST in the database
 * Creating embeddings for relational data with Azure OpenAI
-* Retrieval Augmented Generation (RAG) and Azure SQL
+* Using Azure SQL's VECTOR_DISTANCE for similarity searches
 * Create a chat app on your data with RAG and Azure SQL
 * Securing your data
 * GraphRAG and the Azure SQL Database
