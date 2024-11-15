@@ -26,7 +26,7 @@ Prompt data is something that companies and organizations will want to preserve 
     if (@text is null) return;
     declare @retval int, @qv vector(1536);
 
-    -- Insert into our ledger table
+        -- Insert into our ledger table
     begin
         insert into dbo.PromptHistory (user_name, prompt) values(USER_NAME(), @text);
         commit;
