@@ -41,6 +41,11 @@ Visual Studio Code will be used for working with the database.
 
     ![A picture of selecting the Connection String radio button for input type](./media/Screenshot%202024-10-24%20at%2010.18.17 AM.png)
 
+> [!IMPORTANT] 
+> **Be sure to replace the following placeholders in the connection string in the next step:**
+>
+> **YOUR_AZURE_SQL_SERVER_NAME, YOUR_DATABASE_NAME, YOUR_SQLADMIN_PASSWORD** 
+
 1. In the **Connection String** text box, 
 
     ![A picture of the connection string text box](./media/Screenshot%202024-10-24%20at%2010.26.45 AM.png)
@@ -50,11 +55,6 @@ Visual Studio Code will be used for working with the database.
     ```
     Server=tcp:azuresql@YOUR_AZURE_SQL_SERVER_NAME.database.windows.net,1433;Initial Catalog=YOUR_DATABASE_NAME;Persist Security Info=False;User ID=sqladmin;Password=YOUR_SQLADMIN_PASSWORD;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
     ```
-
-        > [!IMPORTANT] 
-        > **Be sure to replace the following placeholders in this connection string:**
-        >
-        > **YOUR_AZURE_SQL_SERVER_NAME, YOUR_DATABASE_NAME, YOUR_SQLADMIN_PASSWORD** 
 
     then press the **blue Connect button**.
 
