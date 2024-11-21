@@ -11,7 +11,7 @@ Embeddings created and stored in the Azure SQL Database during this lab will pow
 1. Using an empty query sheet in VS Code, copy and paste the following code. This code calls an Azure OpenAI embeddings endpoint. The result will be a JSON array of vectors.
 
     ```SQL
-    declare @url nvarchar(4000) = N'https://igniteai@lab.LabInstance.Id.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-06-01';
+    declare @url nvarchar(4000) = N'https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-06-01';
     declare @message nvarchar(max) = 'Hello World!';
     declare @payload nvarchar(max) = N'{"input": "' + @message + '"}';
 
@@ -21,7 +21,7 @@ Embeddings created and stored in the Azure SQL Database during this lab will pow
         @url = @url,
         @method = 'POST',
         @payload = @payload,
-        @credential = [https://igniteai@lab.LabInstance.Id.openai.azure.com/],
+        @credential = [https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/],
         @timeout = 230,
         @response = @response output;
 
@@ -128,7 +128,7 @@ This next section of the lab will have you alter the Adventure Works product tab
     )
     AS
     BEGIN
-    declare @url varchar(max) = 'https://igniteai@lab.LabInstance.Id.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-06-01';
+    declare @url varchar(max) = 'https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-06-01';
     declare @payload nvarchar(max) = json_object('input': @input_text);
     declare @response nvarchar(max);
     declare @retval int;
@@ -138,7 +138,7 @@ This next section of the lab will have you alter the Adventure Works product tab
         exec @retval = sp_invoke_external_rest_endpoint
             @url = @url,
             @method = 'POST',
-            @credential = [https://igniteai@lab.LabInstance.Id.openai.azure.com/],
+            @credential = [https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/],
             @payload = @payload,
             @response = @response output;
     end try

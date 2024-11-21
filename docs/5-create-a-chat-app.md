@@ -106,7 +106,7 @@ In this section, we are going to create a limited privilege web application user
 
     GRANT EXECUTE ANY EXTERNAL ENDPOINT TO [aiuser];
 
-    GRANT REFERENCES ON DATABASE SCOPED CREDENTIAL :: [https://igniteai@lab.LabInstance.Id.openai.azure.com/] TO [aiuser];
+    GRANT REFERENCES ON DATABASE SCOPED CREDENTIAL :: [https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/] TO [aiuser];
     ```
 
 ## Create the .env file with a database connection string
@@ -134,12 +134,12 @@ In this section, we are going to create a limited privilege web application user
 1. Copy and paste the following parameters into the .env file and save it.
 
     ```ENV
-    AZURE_OPENAI_ENDPOINT="https://igniteai@lab.LabInstance.Id.openai.azure.com/"
+    AZURE_OPENAI_ENDPOINT="https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/"
     AZURE_OPENAI_API_KEY="@lab.Variable(aiKey)"
     AZURE_OPENAI_CHAT_DEPLOYMENT_NAME="gpt-4"
     AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT_NAME="text-embedding-ada-002"
     AZURE_OPENAI_API_VERSION="2024-06-01"
-    AZURE_SQL_CONNECTION_STRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:azuresql@lab.LabInstance.Id.database.windows.net,1433;Database=SampleDB;Uid=aiuser;Pwd=kAgH7e!0D$#;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+    AZURE_SQL_CONNECTION_STRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:azuresql@YOUR_AZURE_SQL_SERVER_NAME.database.windows.net,1433;Database=YOUR_DATABASE_NAME;Uid=aiuser;Pwd=kAgH7e!0D$#;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
     ```
 
     ![A picture of copy and pasting the environment parameters into the .env file](./media/Screenshot%202024-10-28%20at%209.07.52 AM.png)

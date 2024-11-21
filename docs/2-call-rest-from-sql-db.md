@@ -29,10 +29,10 @@ In this first section, you will test the External REST Endpoint Invocation (EREI
     go
 
     -- Create the database scoped credential for Azure OpenAI
-    if not exists(select * from sys.database_scoped_credentials where [name] = 'https://igniteai@lab.LabInstance.Id.openai.azure.com/')
+    if not exists(select * from sys.database_scoped_credentials where [name] = 'https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/')
     begin
-        create database scoped credential [https://igniteai@lab.LabInstance.Id.openai.azure.com/]
-        with identity = 'HTTPEndpointHeaders', secret = '{"api-key":"@lab.Variable(aiKey)"}';
+        create database scoped credential [https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/]
+        with identity = 'HTTPEndpointHeaders', secret = '{"api-key":"YOUR_AI_ENDPOINT_KEY"}';
     end
     go
     ```
@@ -48,7 +48,7 @@ In this first section, you will test the External REST Endpoint Invocation (EREI
 1. Let's test the connectivity between Azure OpenAI and the database and see the ability to call external REST endpoints in action. Copy and paste the following code into a blank query editor in VS Code:
 
     ```SQL
-    declare @url nvarchar(4000) = N'https://igniteai@lab.LabInstance.Id.openai.azure.com/openai/deployments/gpt-4/chat/completions?api-version=2024-06-01';
+    declare @url nvarchar(4000) = N'https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/openai/deployments/gpt-4/chat/completions?api-version=2024-06-01';
     declare @payload nvarchar(max) = N'{"messages":[{"role":"system","content":"You are an expert joke teller."},                                   
                                        {"role":"system","content":"tell me a joke about a llama walking into a bar"}]}'
     declare @ret int, @response nvarchar(max);
@@ -57,7 +57,7 @@ In this first section, you will test the External REST Endpoint Invocation (EREI
         @url = @url,
         @method = 'POST', 
         @payload = @payload,
-        @credential = [https://igniteai@lab.LabInstance.Id.openai.azure.com/],    
+        @credential = [https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/],    
         @timeout = 230,
         @response = @response output;
         
