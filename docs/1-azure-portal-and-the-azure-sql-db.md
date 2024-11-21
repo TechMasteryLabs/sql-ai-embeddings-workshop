@@ -46,7 +46,7 @@ Visual Studio Code will be used for working with the database.
 >
 > **YOUR_AZURE_SQL_SERVER_NAME, YOUR_DATABASE_NAME, YOUR_SQLADMIN_PASSWORD** 
 
-1. In the **Connection String** text box, 
+6. In the **Connection String** text box, 
 
     ![A picture of the connection string text box](./media/Screenshot%202024-10-24%20at%2010.26.45 AM.png)
 
@@ -60,8 +60,8 @@ Visual Studio Code will be used for working with the database.
 
     ![A picture of pressing the blue Connect button](./media/Screenshot%202024-10-24%20at%2010.28.11 AM.png)
 
-1. Once connected to the database, **right click** on the database in the connection navigator on the left side and choose **New Query**.
+7. Once connected to the database, **right click** on the database in the connection navigator on the left side and choose **New Query**.
 
     ![A picture of right clicking on the connection name in the connection navigator on the left side and choosing New Query](./media/Screenshot%202024-10-22%20at%202.02.00 PM.png)
 
-1. You are now connected to the Azure SQL Database!
+8. You are now connected to the Azure SQL Database!
