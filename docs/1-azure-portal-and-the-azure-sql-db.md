@@ -6,7 +6,7 @@
  - Visual Studio Code with the SQL Extension
 
 **Services**
- - Azure OpenAI instance with text endedding and gpt deployments
+ - Azure OpenAI instance with a text-embedding-ada-002 deployment and a gpt-4 deployment.
  - An Azure SQL Database
 
 **Key Information Needed**

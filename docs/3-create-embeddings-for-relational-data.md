@@ -10,6 +10,8 @@ Embeddings created and stored in the Azure SQL Database during this lab will pow
 
 1. Using an empty query sheet in VS Code, copy and paste the following code. This code calls an Azure OpenAI embeddings endpoint. The result will be a JSON array of vectors.
 
+    **Ensure you change the placeholder for YOUR_AI_ENDPOINT_NAME to your Azure OpenAI Endpoint name.**
+
     ```SQL
     declare @url nvarchar(4000) = N'https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-06-01';
     declare @message nvarchar(max) = 'Hello World!';
@@ -119,6 +121,8 @@ This next section of the lab will have you alter the Adventure Works product tab
     ![A picture of clicking the run button on the query sheet](./media/Screenshot%202024-10-24%20at%2010.49.00 AM.png)
 
 1. Next, we are going to use the External REST Endpoint Invocation procedure (sp_invoke_external_rest_endpoint) to create a stored procedure that will create embeddings for text we supply as an input. Copy and paste the following code into a blank query editor in VS Code:
+
+    **Ensure you change the placeholder for YOUR_AI_ENDPOINT_NAME to your Azure OpenAI Endpoint name.**
 
     ```SQL
     create or alter procedure dbo.create_embeddings

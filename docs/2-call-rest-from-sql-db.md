@@ -19,6 +19,8 @@ In this first section, you will test the External REST Endpoint Invocation (EREI
 
 1. Using the new query sheet in VS Code, copy and paste the following code:
 
+    **Ensure you change the placeholder for YOUR_AI_ENDPOINT_NAME to your Azure OpenAI Endpoint name and YOUR_AI_ENDPOINT_KEY to your Azure OpenAI Endpoint Key.**
+
     ```SQL
 
     -- Create a master key for the database
@@ -46,6 +48,8 @@ In this first section, you will test the External REST Endpoint Invocation (EREI
 1. Back in the query sheet, remove the previous code by highlighting it and pressing delete/backspace.
 
 1. Let's test the connectivity between Azure OpenAI and the database and see the ability to call external REST endpoints in action. Copy and paste the following code into a blank query editor in VS Code:
+
+    **Ensure you change the placeholder for YOUR_AI_ENDPOINT_NAME to your Azure OpenAI Endpoint name.**
 
     ```SQL
     declare @url nvarchar(4000) = N'https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/openai/deployments/gpt-4/chat/completions?api-version=2024-06-01';

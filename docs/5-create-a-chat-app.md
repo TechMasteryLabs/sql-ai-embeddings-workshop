@@ -93,10 +93,9 @@ In the section of the lab, you will create a stored procedure that will be used 
 In this section, we are going to create a limited privilege web application user that the Chainlit application will connect to the database with. Its never a good idea to have your sqladmin user be the user we connect to the database with in an application.
 
 1. Run the following SQL in a blank query editor in VS Code:
-
-    > [!KNOWLEDGE]
-    > **The ODBC database connection string used here contains the limited privilege user (aiuser) you just created.** 
     
+    **Ensure you change the placeholder for YOUR_AI_ENDPOINT_NAME to your Azure OpenAI Endpoint name.**
+
     ```SQL
     CREATE USER [aiuser] WITH PASSWORD = 'kAgH7e!0D$#';
 
@@ -132,6 +131,8 @@ In this section, we are going to create a limited privilege web application user
     ![A picture of opening the file in the Visual Studio Code editor by clicking on the filename if not already open](./media/Screenshot%202024-10-28%20at%209.07.01 AM.png)
 
 1. Copy and paste the following parameters into the .env file and save it.
+
+    **Be sure to replace the following placeholders in the connection string:YOUR_AI_ENDPOINT_NAME, YOUR_AZURE_SQL_SERVER_NAME, YOUR_DATABASE_NAME** 
 
     ```ENV
     AZURE_OPENAI_ENDPOINT="https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/"
