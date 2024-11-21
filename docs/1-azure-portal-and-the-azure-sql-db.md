@@ -47,7 +47,7 @@ Visual Studio Code will be used for working with the database.
 
     copy and paste the following connect string:
 
-    > [!NOTE]
+    > [!IMPORTANT] 
     > **Be sure to replace the following placeholders in this connection string:**
     >
     > **YOUR_AZURE_SQL_SERVER_NAME, YOUR_DATABASE_NAME, YOUR_SQLADMIN_PASSWORD** 
