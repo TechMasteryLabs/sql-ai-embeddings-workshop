@@ -162,44 +162,8 @@
         "[resourceId('Microsoft.Sql/servers', concat('azuresql', parameters('serverName')))]"
       ],
       "properties": {
-        "startIpAddress": "103.18.87.240",
-        "endIpAddress": "103.18.87.249"
-      }
-    },
-    {
-      "type": "Microsoft.Sql/servers/firewallRules",
-      "apiVersion": "2023-08-01-preview",
-      "name": "[concat(concat('azuresql', parameters('serverName')), '/skillable2')]",
-      "dependsOn": [
-        "[resourceId('Microsoft.Sql/servers', concat('azuresql', parameters('serverName')))]"
-      ],
-      "properties": {
-        "startIpAddress": "163.47.101.118",
-        "endIpAddress": "163.47.101.126"
-      }
-    },
-    {
-      "type": "Microsoft.Sql/servers/firewallRules",
-      "apiVersion": "2023-08-01-preview",
-      "name": "[concat(concat('azuresql', parameters('serverName')), '/skillable3')]",
-      "dependsOn": [
-        "[resourceId('Microsoft.Sql/servers', concat('azuresql', parameters('serverName')))]"
-      ],
-      "properties": {
-        "startIpAddress": "168.245.203.241",
-        "endIpAddress": "168.245.203.254"
-      }
-    },
-    {
-      "type": "Microsoft.Sql/servers/firewallRules",
-      "apiVersion": "2023-08-01-preview",
-      "name": "[concat(concat('azuresql', parameters('serverName')), '/skillable4')]",
-      "dependsOn": [
-        "[resourceId('Microsoft.Sql/servers', concat('azuresql', parameters('serverName')))]"
-      ],
-      "properties": {
-        "startIpAddress": "185.254.59.118",
-        "endIpAddress": "185.254.59.127"
+        "startIpAddress": "0.0.0.0",
+        "endIpAddress": "0.0.0.1"
       }
     }
   ]
