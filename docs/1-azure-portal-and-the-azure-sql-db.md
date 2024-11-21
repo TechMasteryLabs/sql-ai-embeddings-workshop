@@ -41,16 +41,13 @@ Visual Studio Code will be used for working with the database.
 
     ![A picture of selecting the Connection String radio button for input type](./media/Screenshot%202024-10-24%20at%2010.18.17 AM.png)
 
-> [!IMPORTANT] 
-> **Be sure to replace the following placeholders in the connection string in the next step:**
->
-> **YOUR_AZURE_SQL_SERVER_NAME, YOUR_DATABASE_NAME, YOUR_SQLADMIN_PASSWORD** 
-
-6. In the **Connection String** text box, 
+1. In the **Connection String** text box, 
 
     ![A picture of the connection string text box](./media/Screenshot%202024-10-24%20at%2010.26.45 AM.png)
 
     copy and paste the following connect string:
+
+    **Be sure to replace the following placeholders in the connection string:YOUR_AZURE_SQL_SERVER_NAME, YOUR_DATABASE_NAME, YOUR_SQLADMIN_PASSWORD** 
 
     ```
     Server=tcp:azuresql@YOUR_AZURE_SQL_SERVER_NAME.database.windows.net,1433;Initial Catalog=YOUR_DATABASE_NAME;Persist Security Info=False;User ID=sqladmin;Password=YOUR_SQLADMIN_PASSWORD;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
@@ -60,8 +57,8 @@ Visual Studio Code will be used for working with the database.
 
     ![A picture of pressing the blue Connect button](./media/Screenshot%202024-10-24%20at%2010.28.11 AM.png)
 
-7. Once connected to the database, **right click** on the database in the connection navigator on the left side and choose **New Query**.
+1. Once connected to the database, **right click** on the database in the connection navigator on the left side and choose **New Query**.
 
     ![A picture of right clicking on the connection name in the connection navigator on the left side and choosing New Query](./media/Screenshot%202024-10-22%20at%202.02.00 PM.png)
 
-8. You are now connected to the Azure SQL Database!
+1. You are now connected to the Azure SQL Database!
