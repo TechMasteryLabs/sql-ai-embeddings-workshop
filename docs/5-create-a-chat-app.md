@@ -9,7 +9,7 @@ The framework for our application will be using Chainlit. Chainlit is an open-so
 
 The flow of our application is as follows:
 
-![A picture of the application flow](./media/arch1.png)
+![A picture of the application flow](./media/arch1.jpg)
 
 A user submits a question about a product via the Chainlit front end. That question is then sent to the database where it is embedded and a vector similarity search is done to match products to the question. The result of that search is then passed back to the Chainlit application where it constructs a prompt. This prompt is then passed over to Azure OpenAI (gpt-4) and recieved the answer. This answer is then presented back to the user via the Chainlit application.
 
