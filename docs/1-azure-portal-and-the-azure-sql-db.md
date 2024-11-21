@@ -47,10 +47,10 @@ Visual Studio Code will be used for working with the database.
 
     copy and paste the following connect string:
 
-    > [!IMPORTANT] 
-    > **Be sure to replace the following placeholders in this connection string:**
-    >
-    > **YOUR_AZURE_SQL_SERVER_NAME, YOUR_DATABASE_NAME, YOUR_SQLADMIN_PASSWORD** 
+> [!IMPORTANT] 
+> **Be sure to replace the following placeholders in this connection string:**
+>
+> **YOUR_AZURE_SQL_SERVER_NAME, YOUR_DATABASE_NAME, YOUR_SQLADMIN_PASSWORD** 
 
     ```
     Server=tcp:azuresql@YOUR_AZURE_SQL_SERVER_NAME.database.windows.net,1433;Initial Catalog=YOUR_DATABASE_NAME;Persist Security Info=False;User ID=sqladmin;Password=YOUR_SQLADMIN_PASSWORD;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
