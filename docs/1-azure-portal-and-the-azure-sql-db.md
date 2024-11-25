@@ -1,6 +1,6 @@
 # 1. The Azure Portal and Connecting to an Azure SQL Database
 
-## Prerequisits
+## Prerequisites
 
 **Software**
  - Visual Studio Code with the SQL Extension
