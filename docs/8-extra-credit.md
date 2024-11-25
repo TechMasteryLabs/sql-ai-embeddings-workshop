@@ -14,7 +14,6 @@ Prompt data is something that companies and organizations will want to preserve 
     WITH (LEDGER = ON (APPEND_ONLY = ON)) ;
     ```
 
-
 1. Next, we will alter our find_products stored procedure to insert all prompts into this ledger table. Run the following SQL in a blank query editor in VS Code:
 
     ```SQL
