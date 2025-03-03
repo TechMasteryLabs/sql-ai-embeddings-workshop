@@ -30,8 +30,24 @@
 
 1. Create a Windows 11 VM in the same subscription and VM as your SQL resources
    1. Select **Create a resource** from the Home screen of the Azure Portal
-   1. Search for **Virtual Machine**
-1. RDP to the Windows 11 VM 
+   1. Search for **Virtual Machine** ![image](https://github.com/user-attachments/assets/7db852f0-42c2-4657-aad4-b37617399848)
+   2. Name your VM and select the **Windows 11 Pro** image ![image](https://github.com/user-attachments/assets/002a10a6-bc84-4ac1-b173-aaf6183a75a2)
+   3. Provide a username and password for your VM. ![image](https://github.com/user-attachments/assets/3b3295cd-aae6-4f82-b1e7-cb177ca3f316) **NOTE: the password must be 12 characters or more**
+   4. Click **Review + Create** and wait for the VM to be provisioned
+  
+1. RDP to the Windows 11 VM
+   1. Click **Connect** ![image](https://github.com/user-attachments/assets/1f0441b0-76ce-4187-83c6-72753547d66a)
+   2. Under **Native RDP** click **Select** ![image](https://github.com/user-attachments/assets/ab3f8c84-4553-4798-8e9d-eac097451cca)
+   3. Wait for the validation and then check the box that explains the **Just in time policy** ![image](https://github.com/user-attachments/assets/52c26d69-c4d3-480e-a992-47c2d54476f0)
+   4. Click the **configure** button  ![image](https://github.com/user-attachments/assets/68ed4abc-62cb-4698-badc-10b5cf6fdd99)
+   5. Click **Download RDP File** and select **Keep**  ![image](https://github.com/user-attachments/assets/1a6c2b7b-eca7-4b08-9dab-c4e35ce88934)
+   6. Open your new RDP file by clicking **Open File** and select **open** ![image](https://github.com/user-attachments/assets/01c63b2d-0496-4aa8-b29b-82dfd14bcd8e)
+
+
+
+
+
+
 1. Download and install SSMS
 1. Download and install Visual Studio Code
 
