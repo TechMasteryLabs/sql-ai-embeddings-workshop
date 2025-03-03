@@ -57,7 +57,7 @@
 3. Give your resource a name and optionally create new Azure AI Services ![image](https://github.com/user-attachments/assets/347f4ef4-95b5-4814-bb46-9ee97e7835c1)
 4. Once your resource has been created then open it in the Azure AI Foundry Portal  ![image](https://github.com/user-attachments/assets/3253e86d-10eb-4cfc-b015-0519def1b0c4)
 5. Once you have openned the Portal select **deployments** in the left navigation ![image](https://github.com/user-attachments/assets/98d289bc-be3c-493f-811f-2f8700bbb2c9)
-6. Use the **Deploy Base Model** to add 2 deployments.  One for GPT4 and another for text-embedding-ada-002 ![image](https://github.com/user-attachments/assets/fa4c7472-90f0-4c2f-b981-211bae552cb4)
+6. Use the **Deploy Base Model** to add 2 deployments.  One for **GPT4** and another for **text-embedding-ada-002** ![image](https://github.com/user-attachments/assets/fa4c7472-90f0-4c2f-b981-211bae552cb4)
 7. NOTE: if you select either of the links for the models you can find the **Endpoint** and **API Key**.  You will need this in later labs  ![image](https://github.com/user-attachments/assets/d14d82fd-91b0-4cde-9c95-44c4a1e25421)
 
 
