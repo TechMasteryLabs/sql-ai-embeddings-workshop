@@ -38,7 +38,14 @@ In this first section, you will test the External REST Endpoint Invocation (EREI
     end
     go
     ```
-**HINT:** you can check for the creation of the credentials or delete the credentials using this code
+
+1. Then click the run button on the query sheet
+
+    ![A picture of clicking the run button on the query sheet](./media/Screenshot%202024-10-24%20at%209.18.36 AM.png)
+
+    The master key will be set, and the database scoped credential will be created.
+
+   **HINT:** you can check for the creation of the credentials or delete the credentials using this code
 ```SQL
 -- display the database scoped credential for Azure OpenAI
 select * from sys.database_scoped_credentials where [name] = 'https://techmastery.openai.azure.com/'
@@ -51,20 +58,16 @@ end
 go
 ```
 
-1. Then click the run button on the query sheet
-
-    ![A picture of clicking the run button on the query sheet](./media/Screenshot%202024-10-24%20at%209.18.36 AM.png)
-
-    The master key will be set, and the database scoped credential will be created.
 
 1. Back in the query sheet, remove the previous code by highlighting it and pressing delete/backspace.
 
 1. Let's test the connectivity between Azure OpenAI and the database and see the ability to call external REST endpoints in action. Copy and paste the following code into a blank query editor in VS Code:
 
-    **Ensure you change the placeholder for YOUR_AI_ENDPOINT_NAME to your Azure OpenAI Endpoint name.**
+    **Ensure you change the placeholder for YOUR_AI_ENDPOINT to your Azure OpenAI Endpoint API connection. YOu can copy the entire API from the Deployments section of Azure AI Foundry** ![image](https://github.com/user-attachments/assets/a1774169-c651-40c0-8a8e-4dccba2c6b8d)
+
 
     ```SQL
-    declare @url nvarchar(4000) = N'https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/openai/deployments/gpt-4/chat/completions?api-version=2024-06-01';
+    declare @url nvarchar(4000) = N'https://YOUR_AI_ENDPOINT';
     declare @payload nvarchar(max) = N'{"messages":[{"role":"system","content":"You are an expert joke teller."},                                   
                                        {"role":"system","content":"tell me a joke about a llama walking into a bar"}]}'
     declare @ret int, @response nvarchar(max);
