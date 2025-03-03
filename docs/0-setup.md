@@ -3,7 +3,7 @@
 ## Create a new Resource Group
 1. From the Home screen of the Azure Portal click create
 2. search for **Resource Group**
-3. CLick **Create**
+3. Click **Create**
 4. Gie your Resource Group a name
 
 ## Optional - create a Windows 11 VM 
