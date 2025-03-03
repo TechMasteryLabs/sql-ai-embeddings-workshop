@@ -1,7 +1,8 @@
 # Setup for SQL lab
 
 ## Create a new Resource Group
-1. From the Home screen of the Azure Portal click **Create a resource**
+1. From the Home screen of the Azure Portal click **Create a resource** ![image](https://github.com/user-attachments/assets/c1e64aee-aa4c-4c42-9e98-df4a0fba38a7)
+
 2. Search for **Resource Group**
 3. Click **Create**
 4. Give your Resource Group a name
