@@ -41,14 +41,16 @@
    3. Wait for the validation and then check the box that explains the **Just in time policy** ![image](https://github.com/user-attachments/assets/52c26d69-c4d3-480e-a992-47c2d54476f0)
    4. Click the **configure** button  ![image](https://github.com/user-attachments/assets/68ed4abc-62cb-4698-badc-10b5cf6fdd99)
    5. Click **Download RDP File** and select **Keep**  ![image](https://github.com/user-attachments/assets/1a6c2b7b-eca7-4b08-9dab-c4e35ce88934)
-   6. Open your new RDP file by clicking **Open File** and select **open** ![image](https://github.com/user-attachments/assets/01c63b2d-0496-4aa8-b29b-82dfd14bcd8e)
+   6. Open your new RDP file by clicking **Open File** and select **Connect** ![image](https://github.com/user-attachments/assets/01c63b2d-0496-4aa8-b29b-82dfd14bcd8e)
+   7. NOTE: You may need to examine your VPN settings and try a few times to connect.  Eentually you will get to a dialog box where you can type in the password for the VM  ![image](https://github.com/user-attachments/assets/80e7af1f-90b5-46c5-b904-057698ed7cd8)
+   8. Click **Yes** ![image](https://github.com/user-attachments/assets/cbab34d7-8020-468b-8ff3-92bc43751a95)
+   9. You will then get access to the VM Desktop ![image](https://github.com/user-attachments/assets/a0b857d3-12f5-4eaa-8717-6f2bcc5e6b46)
 
+1. Download and install SSMS ![image](https://github.com/user-attachments/assets/856ffaf2-e515-47fc-93f3-0e5f040f3071)
+   
+1. Download and Install the Azure CLI ![image](https://github.com/user-attachments/assets/cac0b32d-da33-4cdd-81dc-2ad9d534100a)
 
+1. Download and install Visual Studio Code ![image](https://github.com/user-attachments/assets/23594cfb-0a78-45a2-a005-9486e3cfc5c6)
 
-
-
-
-1. Download and install SSMS
-1. Download and install Visual Studio Code
 
 ## Create an Azure AI Foundry project
