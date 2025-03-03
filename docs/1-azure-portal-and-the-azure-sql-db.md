@@ -40,7 +40,11 @@ Visual Studio Code will be used for working with the database. (access from your
 
     ![A picture of entering SampleDB in the Profile Name field](./media/Screenshot%202024-10-24%20at%2010.18.09 AM.png)
 
+
 ### example - use EntraID 
+```markdown
+<details>
+  <summary>Click to expand
 1. Copy the name of the server from the Overview page of Azure SQL and paste it into the **server name** section
    
    ![image](https://github.com/user-attachments/assets/849cb3c2-8a4e-4611-9065-1f79fa217cdb)
@@ -55,7 +59,7 @@ Visual Studio Code will be used for working with the database. (access from your
 
 
 ### end example - use EntraID
-
+</summary>
 
 ### example - use a SQL Admin username and password   
 
