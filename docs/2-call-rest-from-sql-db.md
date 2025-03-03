@@ -38,6 +38,18 @@ In this first section, you will test the External REST Endpoint Invocation (EREI
     end
     go
     ```
+**HINT:** you can check for the creation of the credentials or delete the credentials using this code
+```SQL
+-- display the database scoped credential for Azure OpenAI
+select * from sys.database_scoped_credentials where [name] = 'https://techmastery.openai.azure.com/'
+
+-- delete the database scoped credential for Azure OpenAI
+if exists(select * from sys.database_scoped_credentials where [name] = 'https://techmastery.openai.azure.com/')
+begin
+    drop database scoped credential [https://techmastery.openai.azure.com/];
+end
+go
+```
 
 1. Then click the run button on the query sheet
 
