@@ -10,10 +10,11 @@ Embeddings created and stored in the Azure SQL Database during this lab will pow
 
 1. Using an empty query sheet in VS Code, copy and paste the following code. This code calls an Azure OpenAI embeddings endpoint. The result will be a JSON array of vectors.
 
-    **Ensure you change the placeholder for YOUR_AI_ENDPOINT_NAME to your Azure OpenAI Endpoint name.**
+    **Ensure you change the placeholder for YOUR_AI_ENDPOINT to your Azure OpenAI Endpoint name. Copy this information from the details of the embedding model by clicking the link for text-embedding-ada-002 in the Deployments area** ![image](https://github.com/user-attachments/assets/d1db0e27-4d3d-4234-a7f6-ff03939992eb)
+
 
     ```SQL
-    declare @url nvarchar(4000) = N'https://YOUR_AI_ENDPOINT_NAME.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-06-01';
+    declare @url nvarchar(4000) = N'https://YOUR_AI_ENDPOINT';
     declare @message nvarchar(max) = 'Hello World!';
     declare @payload nvarchar(max) = N'{"input": "' + @message + '"}';
 
@@ -115,6 +116,8 @@ This next section of the lab will have you alter the Adventure Works product tab
     ```
 
     this code adds a vector datatype column to the Product table. It also adds a column named chunk where we will store the text we send over to the embeddings REST endpoint.
+
+**HINT:** You can try a simpe select statement first to make sure that you can access the Tables in the database
 
 1. Then click the run button on the query sheet
 
