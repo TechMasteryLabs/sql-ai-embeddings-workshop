@@ -59,7 +59,9 @@ Visual Studio Code will be used for working with the database. (access from your
 </details>
 
 ### example - use a SQL Admin username and password   
-
+<details>
+  <summary>Click to expand</summary>
+ 
 1. Next, for **Input type**, select the **Connection String** radio button.
 
     ![A picture of selecting the Connection String radio button for input type](./media/Screenshot%202024-10-24%20at%2010.18.17 AM.png)
@@ -74,14 +76,15 @@ Visual Studio Code will be used for working with the database. (access from your
 
     ```
     Server=tcp:azuresql@YOUR_AZURE_SQL_SERVER_NAME.database.windows.net,1433;Initial Catalog=YOUR_DATABASE_NAME;Persist Security Info=False;User ID=sqladmin;Password=YOUR_SQLADMIN_PASSWORD;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
-    ```
-
-
-### end of example - use a SQL Admin username and password   
+    ```  
 
     then press the **blue Connect button**.
+       ![A picture of pressing the blue Connect button](./media/Screenshot%202024-10-24%20at%2010.28.11 AM.png)
+### end of example - use a SQL Admin username and password 
 
-    ![A picture of pressing the blue Connect button](./media/Screenshot%202024-10-24%20at%2010.28.11 AM.png)
+</details>
+
+
 
 1. Once connected to the database, **right click** on the database in the connection navigator on the left side and choose **New Query**.
 
