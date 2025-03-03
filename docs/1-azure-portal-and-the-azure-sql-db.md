@@ -42,11 +42,12 @@ Visual Studio Code will be used for working with the database. (access from your
 
 ### example - use EntraID 
 1. Copy the name of the server from the Overview page of Azure SQL and paste it into the **server name** section
+   
+   ![image](https://github.com/user-attachments/assets/849cb3c2-8a4e-4611-9065-1f79fa217cdb)
+   
    ![image](https://github.com/user-attachments/assets/f4f9a627-10d4-4019-8856-15633705570a)
  
 1. Next, for **Authentication Type**, select the **Microsoft EntraID - Universal with MFA SUpport**.
-
-  ![image](https://github.com/user-attachments/assets/849cb3c2-8a4e-4611-9065-1f79fa217cdb)
 
 1. Your Entra ID account will be auto filled
 1. Type **sampleDB** for the name of the database and click the blue **Connect** button  ![image](https://github.com/user-attachments/assets/ca256cdf-8cc6-4b30-92d3-99b339683a51)
