@@ -22,10 +22,6 @@
 **NOTE: This will create a new Azure database server with a database called **sampleDB** with the AdventureworksLT data  
 
  
-
-
-
-
 ## Optional - create a Windows 11 VM 
 
 1. Create a Windows 11 VM in the same subscription and VM as your SQL resources
@@ -53,4 +49,20 @@
 1. Download and install Visual Studio Code ![image](https://github.com/user-attachments/assets/23594cfb-0a78-45a2-a005-9486e3cfc5c6)
 
 
+
 ## Create an Azure AI Foundry project
+
+1. Create an **Azure AI Foundry** resource by searching for it from the **Create** dialog under your chosen Resource Group ![image](https://github.com/user-attachments/assets/56ab9b43-d69a-468d-bcf6-7138340d65b6)
+2. Select **East US 2** as the region, or choose a region close to your Geo that supports LLM Models ![image](https://github.com/user-attachments/assets/5a1c48b8-7850-4a0c-9ef6-d9166e229d56)
+3. Give your resource a name and optionally create new Azure AI Services ![image](https://github.com/user-attachments/assets/347f4ef4-95b5-4814-bb46-9ee97e7835c1)
+4. Once your resource has been created then open it in the Azure AI Foundry Portal  ![image](https://github.com/user-attachments/assets/3253e86d-10eb-4cfc-b015-0519def1b0c4)
+5. Once you have openned the Portal select **deployments** in the left navigation ![image](https://github.com/user-attachments/assets/98d289bc-be3c-493f-811f-2f8700bbb2c9)
+6. Use the **Deploy Base Model** to add 2 deployments.  One for GPT4 and another for text-embedding-ada-002 ![image](https://github.com/user-attachments/assets/fa4c7472-90f0-4c2f-b981-211bae552cb4)
+7. NOTE: if you select either of the links for the models you can find the **Endpoint** and **API Key**.  You will need this in later labs  ![image](https://github.com/user-attachments/assets/d14d82fd-91b0-4cde-9c95-44c4a1e25421)
+
+
+
+
+
+
+ 
