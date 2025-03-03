@@ -11,6 +11,11 @@
 
 5. Click **Review + Create**
 
+## Create an Azure SQL resource
+1. From the Home screen of the Azure Portal click **Create a resource** ![image](https://github.com/user-attachments/assets/c1e64aee-aa4c-4c42-9e98-df4a0fba38a7)
+2. Search for **Azure SQL** ![image](https://github.com/user-attachments/assets/b3c333bf-3864-4e00-9f22-52b7ee7294a8)
+
+
 ## Optional - create a Windows 11 VM 
 
 1. Create a Windows 11 VM in the same subscription and VM as your SQL resources
