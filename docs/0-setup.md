@@ -1,10 +1,11 @@
 # Setup for SQL lab
 
 ## Create a new Resource Group
-1. From the Home screen of the Azure Portal click create
+1. From the Home screen of the Azure Portal click **create a resoure**
 2. Search for **Resource Group**
 3. Click **Create**
 4. Give your Resource Group a name
+5. Click he **Create Button**
 
 ## Optional - create a Windows 11 VM 
 
