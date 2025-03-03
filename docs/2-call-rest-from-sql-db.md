@@ -19,7 +19,7 @@ In this first section, you will test the External REST Endpoint Invocation (EREI
 
 1. Using the new query sheet in VS Code, copy and paste the following code:
 
-    **Ensure you change the placeholder for YOUR_AI_ENDPOINT_NAME to your Azure OpenAI Endpoint name and YOUR_AI_ENDPOINT_KEY to your Azure OpenAI Endpoint Key.**
+    **Ensure you change the placeholder for YOUR_AI_ENDPOINT_NAME to your Azure OpenAI Endpoint name and YOUR_AI_ENDPOINT_KEY to your Azure OpenAI Endpoint Key. You can copy this information from the Home secrion of Azure AI Foundry**
 
     ```SQL
 
@@ -63,7 +63,7 @@ go
 
 1. Let's test the connectivity between Azure OpenAI and the database and see the ability to call external REST endpoints in action. Copy and paste the following code into a blank query editor in VS Code:
 
-    **Ensure you change the placeholder for YOUR_AI_ENDPOINT to your Azure OpenAI Endpoint API connection. YOu can copy the entire API from the Deployments section of Azure AI Foundry** ![image](https://github.com/user-attachments/assets/a1774169-c651-40c0-8a8e-4dccba2c6b8d)
+    **Ensure you change the placeholder for YOUR_AI_ENDPOINT to your Azure OpenAI Endpoint API connection. You can copy the entire API from the Deployments section of Azure AI Foundry** ![image](https://github.com/user-attachments/assets/a1774169-c651-40c0-8a8e-4dccba2c6b8d)
 
 
     ```SQL
