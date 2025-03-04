@@ -1,4 +1,4 @@
-# Ignite 2024 Lab 420: Build new AI applications with Azure SQL Database
+# Build new AI applications with Azure SQL Database
 
 ## Overview
 This lab will guide you through creating a RAG application using relational data, Azure OpenAI, and the Azure SQL Database. The workshop utilizes the always free Azure SQL Database and the ability to call external REST endpoints via a system stored procedure ([sp_invoke_external_rest_endpoint](https://learn.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql?view=azuresqldb-current&tabs=request-headers)).
